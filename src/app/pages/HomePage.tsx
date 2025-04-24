@@ -41,13 +41,13 @@ const HomePage = () => {
                   href="/services"
                   className="px-8 py-3.5 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-medium rounded-full hover:shadow-lg hover:scale-105 transition-all duration-300 text-center"
                 >
-                  Get Started
+                  Our Services
                 </Link>
                 <Link
                   href="/portfolio"
                   className="px-8 py-3.5 border border-slate-300 text-slate-700 font-medium rounded-full hover:border-slate-400 hover:bg-slate-50 transition-all duration-300 text-center"
                 >
-                  View Our Work
+                  Talk to Us
                 </Link>
               </div>
             </div>
