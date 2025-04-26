@@ -4,42 +4,79 @@ import Image from 'next/image';
 import React from 'react';
 
 const AboutSection = () => {
-  return (
-    <section className="py-12 px-6 bg-gray-50">
-      <div className="max-w-7xl mx-auto">
-        <h2 className="text-4xl font-bold text-blue-600 mb-6">Who we are</h2>
-        <p className="text-lg text-gray-700 mb-10 max-w-3xl">
-          Innova Global is dedicated to helping small businesses thrive in the digital era. We offer simple, personalized, and affordable digital solutions that address real business challenges.
-        </p>
+  const coreValues = [
+    { name: "Innovation", icon: "/Images/Who1.png", description: "Embracing new ideas and technologies to drive growth" },
+    { name: "Simplicity", icon: "/Images/Who2.png", description: "Creating intuitive solutions that are easy to use" },
+    { name: "Personalization", icon: "/Images/Who3.png", description: "Tailoring our approach to your unique business needs" },
+    { name: "Collaboration", icon: "/Images/Who4.png", description: "Working together to achieve remarkable results" },
+  ];
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-          <div className="flex justify-center">
-            <Image src="/code-image.jpg" alt="Digital code" width={300} height={400} className="rounded-2xl" />
+  return (
+    <section className="py-24 px-6 bg-gradient-to-b from-white to-blue-50">
+      <div className="max-w-7xl mx-auto">
+        <div className="flex flex-col md:flex-row gap-16 mb-20">
+          <div className="md:w-1/2">
+            <h2 className="text-5xl font-bold text-blue-700 mb-8 relative">
+              Who we are
+              <span className="absolute -bottom-3 left-0 w-20 h-1 bg-blue-500"></span>
+            </h2>
+            <p className="text-xl leading-relaxed text-gray-700 mb-8">
+              Innova Global is dedicated to helping small businesses thrive in the digital era. We offer simple, personalized, and affordable digital solutions that address real business challenges.
+            </p>
+            <p className="text-xl leading-relaxed text-gray-700">
+              Our team combines technical expertise with business acumen to deliver results that matter for your growth and success.
+            </p>
           </div>
-          <div className="flex justify-center">
-            <Image src="/hand-apps.jpg" alt="Hand with digital icons" width={300} height={400} className="rounded-2xl" />
+          
+          <div className="md:w-1/2 grid grid-cols-2 gap-6">
+            <div className="aspect-square relative overflow-hidden rounded-2xl shadow-lg transform transition duration-300 hover:scale-105">
+              <Image 
+                src="/Images/who11.jpg" 
+                alt="Digital code" 
+                fill 
+                className="object-cover" 
+              />
+            </div>
+            <div className="aspect-square relative overflow-hidden rounded-2xl shadow-lg transform translate-y-8 transition duration-300 hover:scale-105">
+              <Image 
+                src="/Images/who22.jpg" 
+                alt="Hand with digital icons" 
+                fill 
+                className="object-cover" 
+              />
+            </div>
           </div>
         </div>
 
-        <h3 className="text-3xl font-bold text-blue-600 mb-8">Core Values</h3>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
-          {/* Core Value Card */}
-          <div className="bg-blue-100 rounded-lg p-6 flex flex-col items-center">
-            <Image src="/innovation-icon.png" alt="Innovation" width={50} height={50} />
-            <h4 className="mt-4 text-lg font-semibold">Innovation</h4>
-          </div>
-          <div className="bg-blue-100 rounded-lg p-6 flex flex-col items-center">
-            <Image src="/simplicity-icon.png" alt="Simplicity" width={50} height={50} />
-            <h4 className="mt-4 text-lg font-semibold">Simplicity</h4>
-          </div>
-          <div className="bg-blue-100 rounded-lg p-6 flex flex-col items-center">
-            <Image src="/personalization-icon.png" alt="Personalization" width={50} height={50} />
-            <h4 className="mt-4 text-lg font-semibold">Personalization</h4>
-          </div>
-          <div className="bg-blue-100 rounded-lg p-6 flex flex-col items-center">
-            <Image src="/collaboration-icon.png" alt="Collaboration" width={50} height={50} />
-            <h4 className="mt-4 text-lg font-semibold">Collaboration</h4>
-          </div>
+        <div className="mb-12">
+          <h3 className="text-3xl font-bold text-blue-700 mb-4 relative inline-block">
+            Our Core Values
+            <span className="absolute -bottom-2 left-0 w-16 h-1 bg-blue-500"></span>
+          </h3>
+          <p className="text-xl text-gray-600 mb-12 max-w-3xl">
+            These principles guide our approach and ensure we deliver exceptional value to every client.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          {coreValues.map((value, index) => (
+            <div 
+              key={index} 
+              className="bg-white rounded-xl p-8 shadow-lg transition-all duration-300 hover:shadow-xl hover:translate-y--2 border border-gray-100 flex flex-col items-center text-center group"
+            >
+              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6 group-hover:bg-blue-200 transition-all duration-300">
+                <Image 
+                  src={value.icon} 
+                  alt={value.name} 
+                  width={40} 
+                  height={40} 
+                  className="transition-transform duration-300 group-hover:scale-110" 
+                />
+              </div>
+              <h4 className="text-xl font-bold text-blue-800 mb-4">{value.name}</h4>
+              <p className="text-gray-600">{value.description}</p>
+            </div>
+          ))}
         </div>
       </div>
     </section>
