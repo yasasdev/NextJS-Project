@@ -2,6 +2,8 @@ import React from 'react'
 import Navbar from './components/Navbar/Navbar'
 import HomePage from './pages/HomePage'
 import OurServices from './components/OurServices/OurServices'
+import OurClients from './components/OurClients/OurClients'
+import WhoWeAre from './components/WhoWeAre/WhoWeAre'
 
 const page = () => {
   return (
@@ -13,6 +15,8 @@ const page = () => {
         <p className="mt-4 text-lg">This is a simple portfolio page.</p>
       </div> */}
       <OurServices />
+      <OurClients />
+      <WhoWeAre />
     </>
   )
 }

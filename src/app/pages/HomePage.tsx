@@ -33,12 +33,14 @@ const HomePage = () => {
               <div className="inline-block rounded-full bg-blue-100 px-4 py-1.5 text-sm font-semibold text-blue-700 mb-3">
                 Welcome to Our Platform
               </div>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-                Your journey to <br /> digital transformation starts with us
+              <h1 className="text-4xl md:text-5xl lg:text-5xl font-bold leading-tight bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+                Your journey to <br /> 
+                <span className="bg-none text-gray-500">digital transformation</span> <br /> 
+                starts with us
               </h1>
               <div className="flex flex-col sm:flex-row gap-4 mt-8">
                 <Link
-                  href="/services"
+                  href="#"
                   className="px-8 py-3.5 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-medium rounded-full hover:shadow-lg hover:scale-105 transition-all duration-300 text-center"
                 >
                   Our Services

@@ -85,8 +85,8 @@ const ServicesSection = () => {
                     Learn more
                   </Link>
                 ) : (
-                  <span className="bg-slate-200 text-blue-600 text-xs px-3 py-1 rounded-full inline-block">
-                    Learn more
+                  <span className="bg-slate-200 text-black font-bold text-xs px-3 py-1 rounded-full inline-block">
+                    Coming Soon
                   </span>
                 )}
               </div>
