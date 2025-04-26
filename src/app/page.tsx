@@ -4,6 +4,7 @@ import HomePage from './pages/HomePage'
 import OurServices from './components/OurServices/OurServices'
 import OurClients from './components/OurClients/OurClients'
 import WhoWeAre from './components/WhoWeAre/WhoWeAre'
+import Connect from './components/Connect/ConnectWithUs'
 
 const page = () => {
   return (
@@ -17,6 +18,7 @@ const page = () => {
       <OurServices />
       <OurClients />
       <WhoWeAre />
+      <Connect />
     </>
   )
 }
