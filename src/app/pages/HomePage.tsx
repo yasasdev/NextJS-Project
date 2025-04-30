@@ -30,10 +30,10 @@ const HomePage = () => {
             }`}
           >
             <div className="space-y-6">
-              <div className="inline-block rounded-full bg-blue-100 px-4 py-1.5 text-sm font-semibold text-blue-700 mb-3">
-                Welcome to Our Platform
-              </div>
-              <h1 className="text-4xl md:text-5xl lg:text-5xl font-bold leading-tight bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+                <div className="inline-block rounded-full bg-blue-100 px-4 py-1.5 text-sm font-semibold text-blue-400 mb-3">
+                  Welcome to Our Platform
+                </div>
+              <h1 className="text-4xl md:text-5xl lg:text-5xl font-bold leading-tight bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
                 Your journey to <br /> 
                 <span className="bg-none text-gray-500">digital transformation</span> <br /> 
                 starts with us
@@ -41,13 +41,14 @@ const HomePage = () => {
               <div className="flex flex-col sm:flex-row gap-4 mt-8">
                 <Link
                   href="#"
-                  className="px-8 py-3.5 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-medium rounded-full hover:shadow-lg hover:scale-105 transition-all duration-300 text-center"
+                  className="px-6 py-1.5 bg-gradient-to-r from-blue-500 to-blue-300 text-white font-medium rounded-full hover:shadow-lg hover:scale-105 transition-all duration-300 text-center"
                 >
                   Our Services
                 </Link>
+
                 <Link
                   href="/portfolio"
-                  className="px-8 py-3.5 border border-slate-300 text-slate-700 font-medium rounded-full hover:border-slate-400 hover:bg-slate-50 transition-all duration-300 text-center"
+                  className="px-6 py-1.5 border border-slate-300 text-slate-700 font-medium rounded-full hover:border-slate-400 hover:bg-slate-50 transition-all duration-300 text-center"
                 >
                   Talk to Us
                 </Link>

@@ -34,11 +34,12 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed w-full z-50 transition-all duration-500 ${
-        scrolled
-          ? "bg-white/80 dark:bg-gray-900/90 backdrop-blur-lg shadow-lg py-3"
-          : "bg-transparent py-6"
-      }`}
+    className={`fixed w-full z-50 transition-all duration-500 ${
+      scrolled
+        ? "bg-[rgb(183, 210, 250)]/95 dark:bg-[rgb(183, 210, 250)] backdrop-blur-lg shadow-lg py-3"
+        : "bg-[rgb(183, 210, 250)]/30 dark:bg-transparent py-6"
+    }`}
+    
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center">
@@ -54,16 +55,16 @@ const Navbar = () => {
                   src="/Images/Bulb.png"
                   alt="Innova Global Logo"
                   fill
-                  className="object-contain"
+                  className="object-contain" 
                   priority
                 />
               </motion.div>
             </div>
-            <motion.span 
+            <motion.span
               initial={{ opacity: 0, x: -10 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
-              className="text-2xl font-bold bg-gradient-to-br from-blue-600 via-purple-600 to-indigo-500 bg-clip-text text-transparent group-hover:from-indigo-500 group-hover:via-purple-500 group-hover:to-blue-600 transition-all duration-300"
+              className="text-2xl font-bold text-[rgb(191,206,226)] transition-all duration-300 group-hover:text-[rgb(147,197,253)]"
             >
               Innova Global
             </motion.span>
@@ -139,7 +140,7 @@ const Navbar = () => {
 
             {/* Contact Button */}
             <Link href="/contact">
-              <motion.button 
+              <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="bg-gradient-to-br from-blue-500 via-indigo-500 to-purple-600 text-white px-7 py-2.5 rounded-full text-sm font-semibold transition-all duration-300 shadow-lg hover:shadow-blue-500/30 dark:hover:shadow-blue-600/40 flex items-center space-x-2"
@@ -240,11 +241,11 @@ const Navbar = () => {
             transition={{ duration: 0.3 }}
             className="md:hidden overflow-hidden"
           >
-            <motion.div 
+            <motion.div
               initial={{ y: -10 }}
               animate={{ y: 0 }}
               transition={{ staggerChildren: 0.05, delayChildren: 0.05 }}
-              className="px-4 pt-3 pb-5 space-y-3 bg-white/90 dark:bg-gray-900/95 backdrop-blur-xl shadow-xl rounded-b-2xl border-t border-gray-100 dark:border-gray-800"
+              className="px-4 pt-3 pb-5 space-y-3 bg-blue-50/95 dark:bg-gray-900/95 backdrop-blur-xl shadow-xl rounded-b-2xl border-t border-blue-100 dark:border-gray-800"
             >
               {navLinks.map((link, index) => (
                 <motion.div
@@ -275,7 +276,7 @@ const Navbar = () => {
                 transition={{ delay: navLinks.length * 0.1 }}
               >
                 <Link href="/contact">
-                  <motion.button 
+                  <motion.button
                     whileTap={{ scale: 0.95 }}
                     className="mt-4 w-full bg-gradient-to-br from-blue-500 via-indigo-500 to-purple-600 text-white px-4 py-3 rounded-xl text-sm font-semibold transition-all duration-300 flex items-center justify-center space-x-2 shadow-md"
                   >

@@ -1,21 +1,21 @@
-import Image from 'next/image';
+import Image from "next/image";
 
 const clients = [
   {
-    logo: '/Images/Sellhub.png',
-    name: 'SellHub.lk',
+    logo: "/Images/Sellhub.png",
+    name: "SellHub.lk",
     testimonial:
       "SellHub.lk transformed into a seamless buying and selling platform thanks to Innova Global's expertise. The website is fast, user-friendly, and exactly what we needed!",
     rating: 5,
-    profileImage: '/images/profile.png',
+    profileImage: "/images/profile.png",
   },
   {
-    logo: '/Images/Vidu Auto.png',
-    name: 'Vidu Auto',
+    logo: "/Images/Vidu Auto.png",
+    name: "Vidu Auto",
     testimonial:
-      'Innova Global provided us with a powerful POS, inventory, and payroll system. Our operations are now smooth and efficient!',
+      "Innova Global provided us with a powerful POS, inventory, and payroll system. Our operations are now smooth and efficient!",
     rating: 5,
-    profileImage: '/images/profile.png',
+    profileImage: "/images/profile.png",
   },
 ];
 
@@ -35,11 +35,16 @@ export default function ClientsSection() {
           >
             <div>
               <div className="flex justify-center mb-4">
-                <Image src={client.logo} alt={client.name} width={150} height={80} />
+                <Image
+                  src={client.logo}
+                  alt={client.name}
+                  width={150}
+                  height={80}
+                />
               </div>
 
               <div className="relative border border-gray-400 rounded-md p-4 text-sm text-gray-700 h-[160px] flex flex-col justify-between">
-                <p className="mb-4 line-clamp-4">{client.testimonial}</p>
+                <p className="mb-4">{client.testimonial}</p>
 
                 <div className="flex items-center justify-between mt-auto">
                   <div className="flex gap-1">
